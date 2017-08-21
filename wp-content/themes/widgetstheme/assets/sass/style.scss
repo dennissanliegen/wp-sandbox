@@ -1,0 +1,33 @@
+/*
+
+Theme Name: widgets
+Theme URI: http://
+Author: sanliegen.com
+Author URI: http://kommunikation.sanliegen.com/
+Description:
+Version: 1.0.0
+
+*/
+
+/*
+  ==================================
+    1 - TOOLS
+  ==================================
+*/
+@import "1-tools/normalize";
+@import "1-tools/bourbon/bourbon";
+@import "1-tools/neat/neat";
+/*
+  ==================================
+    2 - BASICS
+  ==================================
+*/
+@import "2-basics/variables";
+@import "2-basics/body-element";
+@import "2-basics/article";
+/*
+  ==================================
+    3 - layouts
+  ==================================
+*/
+@import "3-layouts/layout";
