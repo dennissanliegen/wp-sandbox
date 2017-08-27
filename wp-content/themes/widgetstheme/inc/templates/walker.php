@@ -31,14 +31,14 @@ class walkernav extends Walker_Nav_Menu
         $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";
 
         // CHECK IF DROPDOWN IS MEGAMENU 
-        if( $this->megaMenuID != 0){
+        if( $this->megaMenuID != 0 && $depth == 0 ){
             $output .= "<li class=\"megamenu__column\"><ul>\n";
         }
     }
 
     public function end_lvl(&$output, $depth = 0, $args = array())
     {
-        if( $this->megaMenuID != 0){
+        if( $this->megaMenuID != 0 && $depth == 0 ){
             $output .= "</ul></li></ul>";
         }
 
@@ -48,23 +48,29 @@ class walkernav extends Walker_Nav_Menu
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {   
 
-        if( $this->megaMenuID != 0 && $this->megaMenuID === intval($item->menu_item_parent) ){
 
-            if( $this->count % 2 == 0 && $this->count != 0 ){
-                $output .= "</ul></li><li class=\"megamenu__column\"><ul>\n";
-                $this->count = 0;
-            }
-            
-            $this->count++;
-
-        } else {
+        if( $this->megaMenuID != 0 && $this->megaMenuID != intval($item->menu_item_parent) && $depth == 0 ){
             $this->megaMenuID = 0;
         }
+        // if( $this->megaMenuID != 0 && $this->megaMenuID === intval($item->menu_item_parent) ){
+        //     if( $this->count % 2 == 0 && $this->count != 0 ){
+        //         $output .= "</ul></li><li class=\"megamenu__column\"><ul>\n";
+        //         $this->count = 0;
+        //     }
+        //     $this->count++;
+        // } else {
+        //     $this->megaMenuID = 0;
+        // }
 
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
         $li_attributes = '';
         $class_names = $value = '';
         $classes = empty($item->classes) ? array() : (array) $item->classes;
+
+        $column_divider = array_search('column', $classes);
+        if( $column_divider !== false) {
+            $output .= "</ul></li><li class=\"megamenu__column\"><ul>\n";
+        }
 
         // CHECK IF DROPDOWN IS MEGAMENU (SEARCH FOR CLASS & ADD ID)
         if( array_search('megamenu', $classes) !== false ){
