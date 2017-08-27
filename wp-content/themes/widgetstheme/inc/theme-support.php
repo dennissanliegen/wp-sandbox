@@ -17,6 +17,9 @@ function starter_register_nav_menu(){
 }
 add_action( 'after_setup_theme', 'starter_register_nav_menu' );
 
+/* ADD WALKER CLASS */ 
+require get_template_directory() . '/inc/templates/walker.php';
+
 /* Activate HTML5 FEATURES */ 
 add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form') );
 
