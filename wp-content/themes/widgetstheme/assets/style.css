@@ -418,20 +418,20 @@ header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu {
   width: 100%;
   border-color: #fff;
 }
-/* line 44, sass/3-layouts/_bootstrapHeader.sass */
+/* line 42, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column {
   display: block;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 25%;
 }
-/* line 52, sass/3-layouts/_bootstrapHeader.sass */
+/* line 48, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-/* line 57, sass/3-layouts/_bootstrapHeader.sass */
+/* line 53, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul a {
   font-size: 14px;
   font-weight: 600;
@@ -440,37 +440,37 @@ header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__co
   display: block;
   color: #9b0010;
 }
-/* line 65, sass/3-layouts/_bootstrapHeader.sass */
+/* line 61, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul a:hover, header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul a:focus {
   background-color: #E7F1EC;
   color: #333;
 }
-/* line 70, sass/3-layouts/_bootstrapHeader.sass */
+/* line 66, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul span.sub {
   font-size: 13px;
   padding: 4px 20px;
   margin-top: -4px;
   display: block;
 }
-/* line 77, sass/3-layouts/_bootstrapHeader.sass */
+/* line 73, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul .featured-image a {
   font-size: 14px;
   font-weight: 600;
   color: #9b0010;
 }
-/* line 82, sass/3-layouts/_bootstrapHeader.sass */
+/* line 78, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul .featured-image .megamenu__image__wrapper {
   position: relative;
   width: 100%;
 }
-/* line 86, sass/3-layouts/_bootstrapHeader.sass */
+/* line 82, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .navbar-nav > li.megamenu > .dropdown-menu .megamenu__column ul .featured-image .megamenu__image__wrapper img {
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
 }
-/* line 93, sass/3-layouts/_bootstrapHeader.sass */
+/* line 89, sass/3-layouts/_bootstrapHeader.sass */
 header .navbar-megamenu .open > .dropdown-menu {
   display: flex;
   flex-wrap: wrap;

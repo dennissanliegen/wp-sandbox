@@ -41,14 +41,12 @@ class walkernav extends Walker_Nav_Menu
         if( $this->megaMenuID != 0 && $depth == 0 ){
             $output .= "</ul></li></ul>";
         }
-
         $output .= "</ul>";
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {   
-
-
+        
         if( $this->megaMenuID != 0 && $this->megaMenuID != intval($item->menu_item_parent) && $depth == 0 ){
             $this->megaMenuID = 0;
         }
